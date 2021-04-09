@@ -1,21 +1,45 @@
 package com.e.quotesensation;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Paint;
 import android.os.Bundle;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView Title;
+    ViewPager viewPager;
+    ViewPagerAdapter viewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Title = findViewById(R.id.tvTitle);
-        Title.setPaintFlags(Title.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        viewPager = findViewById(R.id.viewPager);
+
+
+        viewPagerAdapter = new ViewPagerAdapter(this);
+        viewPager.setAdapter(viewPagerAdapter);
+        viewPager.addOnPageChangeListener(listener);
+
+
     }
+
+    private ViewPager.OnPageChangeListener listener = new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+
+
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
+    };
 }

@@ -6,64 +6,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimaryDark"
-    tools:context=".Login">
+    android:background="@color/colorPrimary"
+    tools:context=".SplashScreen">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/white"
+        android:background="@color/colorPrimaryLight"
         android:layout_margin="5dp"
-        android:gravity="center"
         >
 
         <TextView
+            android:id="@+id/tvTitleLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/cookie"
             android:gravity="center"
             android:padding="10dp"
-            android:text="Quote sensation"
-            android:textColor="@color/colorPrimary"
+            android:text="The Spur"
+            android:textColor="@color/black"
             android:textSize="60sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/colorPrimaryLight"
-            android:layout_margin="20dp"
-            >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_google_logo"
-                android:padding="5dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                />
 
-            <TextView
-                android:id="@+id/tvSignIn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:layout_margin="5dp"
-                android:padding="5dp"
-                android:text="Sign in with google"
-                android:fontFamily="casual"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:textColor="@color/black"
-                android:clickable="true"
-                android:focusable="true"
-                />
-
-        </LinearLayout>
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="300dp"
+            android:src="@mipmap/spur_logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            />
 
 
     </LinearLayout>
